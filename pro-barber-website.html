@@ -154,16 +154,16 @@
       }
       .hero-in{position:relative;z-index:2;}
       .hero-logo{width:min(560px,88vw);margin:0 auto 8px;}
-      .hero .script{font-size:1.05rem;letter-spacing:.32em;color:var(--gold);margin:10px 0 14px;}
+      .hero .script{font-size:1.25rem;letter-spacing:.32em;color:var(--gold);margin:22px 0 24px;}
       .hero h1{font-size:clamp(2rem,5.6vw,3.6rem);font-weight:600;}
       .hero h1 em{font-style:normal;color:var(--gold);}
       .hero p.lede{max-width:620px;margin:18px auto 0;color:#ddd8cf;font-size:1.08rem;}
-      .hero-ctas{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center;margin-top:30px;}
+      .hero-ctas{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center;margin-top:44px;}
       .review-col{display:flex;flex-direction:column;align-items:center;gap:8px;}
       .review-col .stars{color:var(--gold);letter-spacing:.35em;font-size:1rem;}
       .btn-white{background:#fff;color:#161310;}
       .hero-meta{
-        display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px;
+        display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:80px;
       }
       .pill{
         display:inline-flex;align-items:center;gap:8px;
@@ -250,6 +250,14 @@
       .about-txt p{color:#35322d;margin:16px 0 0;}
       .diff-list{list-style:none;margin:26px 0 0;padding:0;text-align:left;}
       .diff-list li{margin:12px 0;color:#35322d;line-height:1.55;}
+      .diff-strip{border-top:1px solid rgba(207,166,92,.45);padding-top:36px;padding-bottom:36px;}
+      .diff-strip .diff-grid{display:flex;gap:20px;justify-content:center;}
+      .diff-strip .diff-item{flex:1;text-align:center;border:1px solid rgba(207,166,92,.45);border-radius:12px;padding:24px 20px;background:rgba(207,166,92,.08);}
+      .diff-strip .diff-item b{display:block;color:var(--gold);font-size:1.05rem;margin-bottom:6px;}
+      .diff-strip .diff-item span{color:#ddd8cf;line-height:1.55;font-size:.95rem;}
+      .diff-strip .diff-icon{color:var(--gold);margin-bottom:12px;line-height:0;}
+      .diff-strip .diff-icon svg{width:30px;height:30px;}
+      @media (max-width:760px){.diff-strip .diff-grid{flex-direction:column;align-items:center;gap:16px;}.diff-strip .diff-item{width:100%;max-width:none;}.diff-strip{padding-top:28px;padding-bottom:28px;}}
       .diff-list li b{color:var(--gold-deep);}
       .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;}
       .fact{border:1px solid var(--line-light);border-radius:var(--radius);padding:16px 14px;background:var(--paper);text-align:center;}
@@ -381,17 +389,25 @@
         <div class="hero-ctas">
           <a class="btn btn-gold" href="tel:+61431166115">Call 0431 166 115</a>
           <div class="review-col">
-            <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <a class="btn btn-white" href="https://g.page/r/CdZFtRi1Y08DEBM/review" target="_blank" rel="noopener">Leave a Google Review</a>
           </div>
         </div>
         <div class="hero-meta">
-          <span class="pill"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.8 &middot; 174 Google reviews</span>
+          <span class="pill"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Top rated on Google</span>
           <span class="pill"><span class="dot" id="status-dot"></span><span id="status-text">Checking hours&hellip;</span></span>
         </div>
       </div>
     </div>
 
+    <section class="section black diff-strip">
+      <div class="wrap">
+        <div class="diff-grid">
+          <div class="diff-item"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.5" y2="15.5"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.5" y1="8.5" x2="12" y2="12"/></svg></div><b>Clean tools, every time.</b> Tools are cleaned and sanitised regularly &mdash; hygiene is taken seriously.</div>
+          <div class="diff-item"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><b>One barber, every time.</b> Owner-operated, so the same hands and the same standard on every visit.</div>
+          <div class="diff-item"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><b>Finished only when it&rsquo;s right.</b> Every cut is checked in the mirror from every angle before you leave the chair.</div>
+        </div>
+      </div>
+    </section>
     <!-- ===== Prices (white) ===== -->
     <section class="section light" id="prices">
       <div class="wrap">
@@ -469,11 +485,6 @@
             <div class="fact"><div class="num">4.8&#9733;</div><div class="lbl">Real Google reviews</div></div>
             <div class="fact"><div class="num">174</div><div class="lbl">Google reviews</div></div>
           </div>
-          <ul class="diff-list">
-            <li><b>Clean tools, every time.</b> Tools are cleaned and sanitised regularly &mdash; hygiene is taken seriously.</li>
-            <li><b>One barber, every time.</b> Owner-operated, so the same hands and the same standard on every visit.</li>
-            <li><b>Finished only when it&rsquo;s right.</b> Every cut is checked in the mirror from every angle before you leave the chair.</li>
-          </ul>
         </div>
       </div>
     </section>
