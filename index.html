@@ -252,6 +252,8 @@
       .diff-strip{border-top:1px solid rgba(207,166,92,.45);padding-top:36px;padding-bottom:36px;}
       .diff-strip .diff-grid{display:flex;gap:20px;justify-content:center;}
       .diff-strip .diff-item{flex:1;text-align:center;border:1px solid rgba(207,166,92,.45);border-radius:12px;padding:24px 20px;background:rgba(207,166,92,.08);}
+        .diff-strip a.diff-item{text-decoration:none;color:inherit;transition:border-color .2s,background .2s;}
+        .diff-strip a.diff-item:hover{border-color:var(--gold);background:rgba(207,166,92,.14);}
       .diff-strip .diff-item b{display:block;color:var(--gold);font-size:1.05rem;margin-bottom:6px;}
       .diff-strip .diff-item span{color:#ddd8cf;line-height:1.55;font-size:.95rem;}
       .diff-strip .diff-icon{color:var(--gold);margin-bottom:12px;line-height:0;}
@@ -361,11 +363,13 @@
           <span></span><span></span><span></span>
         </button>
         <nav class="main" id="mainnav">
+          <a href="https://probarber.com.au/">Home</a>
           <a href="#prices">Prices</a>
           <a href="#gallery">Gallery</a>
           <a href="#about">About</a>
           <a href="#visit">Visit Us</a>
           <a href="https://probarber.com.au/grooming-kit.html">Grooming Kit</a>
+          <a href="https://probarber.com.au/style-match.html">Style Match</a>
           <a class="btn btn-gold btn-sm header-call" href="tel:+61431166115">Call 0431 166 115</a>
         </nav>
       </div>
@@ -405,6 +409,11 @@
 
     <section class="section black diff-strip">
       <div class="wrap">
+        <div class="diff-grid" style="margin-bottom:20px">
+          <a class="diff-item" href="https://probarber.com.au/grooming-kit.html"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.5" y2="15.5"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.5" y1="8.5" x2="12" y2="12"/></svg></div><b>Your own kit, kept here &rarr;</b> Your numbered grooming kit, stored at the shop — your own tools, only ever on your hair.</a>
+          <a class="diff-item" href="https://probarber.com.au/style-match.html"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 7l1.2-2.2h4.6L15.5 7"/></svg></div><b>See your next cut first &rarr;</b> Style Match puts five cuts on your own photo and picks the one that suits your face. Free in store.</a>
+          <a class="diff-item" href="#prices"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><b>Honest prices, up front &rarr;</b> Every service and every price on one list — no surprises at the counter.</a>
+        </div>
         <div class="diff-grid">
           <div class="diff-item"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.5" y2="15.5"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.5" y1="8.5" x2="12" y2="12"/></svg></div><b>Clean tools, every time.</b> Tools are cleaned and sanitised regularly &mdash; hygiene is taken seriously.</div>
           <div class="diff-item"><div class="diff-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><b>One barber, every time.</b> Owner-operated, so the same hands and the same standard on every visit.</div>
@@ -553,6 +562,7 @@
           <a href="#about">About</a>
           <a href="#visit">Visit Us</a>
           <a href="https://probarber.com.au/grooming-kit.html">Grooming Kit</a>
+          <a href="https://probarber.com.au/style-match.html">Style Match</a>
           <a href="https://www.instagram.com/probarber.au" target="_blank" rel="noopener">Instagram</a>
         </div>
         <div class="foot-credit">
