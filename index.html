@@ -178,9 +178,12 @@
 
       /* ---------- Hero two boxes (preview for Ben, 21 Nov 2026) ---------- */
       .hero-boxes{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1080px;margin:38px auto 0;text-align:left;}
-      .hero-box{border:1px solid #3d3d3d;border-radius:14px;padding:34px 30px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;}
+      .hero-box{border:1px solid var(--gold);border-radius:14px;padding:34px 30px;background:rgba(255,255,255,.02);display:flex;flex-direction:column;}
       .hero-box.ai{border:1px solid var(--gold);}
       .hero-box .box-tag{font-size:.78rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin:0 0 14px;}
+      .hero-box .ai-tag{display:flex;align-items:center;gap:16px;margin:0 0 18px;}
+      .hero-box .ai-big{font-family:"Oswald",sans-serif;font-size:3.1rem;font-weight:700;line-height:.95;color:var(--gold);letter-spacing:.02em;}
+      .hero-box .ai-tag-text{font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:#ece8df;line-height:1.55;}
       .hero-box h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:600;line-height:1.18;}
       .hero-box h2 em{font-style:normal;color:var(--gold);}
       .hero-box h1{font-size:clamp(1.6rem,3.4vw,2.3rem);line-height:1.18;text-align:left;}
@@ -412,7 +415,7 @@
         <p class="script">walk-ins welcome</p>
         <div class="hero-boxes">
           <div class="hero-box ai">
-            <p class="box-tag">New &middot; AI Style Match</p>
+            <p class="box-tag ai-tag"><span class="ai-big">AI</span><span class="ai-tag-text">Style Match<br />New at Pro Barber</span></p>
             <h2>See your next cut <em>on your own face</em></h2>
             <p class="box-text">Not sure what suits you? Upload your photo &mdash; our AI tries five cuts on YOUR face, reads your face shape, and picks the #1 cut for you, with the reasons why.</p>
             <div class="box-ctas">
