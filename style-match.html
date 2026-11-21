@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Style Match — See Your Next Cut On Your Own Face | Pro Barber Northcote</title>
-<meta name="description" content="Style Match at Pro Barber Northcote: see five haircuts on your own photo and get your barber's #1 pick, with the reasons why. Free in store — just ask." />
+<meta name="description" content="Style Match at Pro Barber Northcote: try it free right here — see five haircuts on your own photo and get your barber's #1 pick, with the reasons why." />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
@@ -65,7 +65,7 @@ section{scroll-margin-top:84px}
 .hero p.lede{max-width:620px;margin:18px auto 0;color:#ddd8cf;font-size:1.08rem}
 .badge{display:inline-block;margin-top:30px;border:1.5px solid var(--gold);border-radius:999px;background:rgba(207,166,92,.08);padding:10px 22px;font-family:"Oswald",sans-serif;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .hero-ctas{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center;margin-top:36px}
-.hero-poster{max-width:960px;margin:0 auto 40px;border:1px solid var(--line-dark);border-radius:var(--radius);overflow:hidden}
+.hero-poster{max-width:400px;margin:0 auto 40px;border:1px solid var(--line-dark);border-radius:var(--radius);overflow:hidden}
 .hero-poster img{width:100%;height:auto}
 
 /* ---------- How it works ---------- */
@@ -135,6 +135,55 @@ footer small{color:#7d786e;font-size:.82rem;display:block;margin-top:16px}
   .strip-track b{font-weight:600}
   @keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media (prefers-reduced-motion: reduce){.strip-track{animation:none}}
+
+/* ---------- Style Match try-on flow ---------- */
+.tryon{max-width:860px;margin:0 auto}
+.hero .tryon{margin-top:30px;text-align:left}
+.tryon [hidden]{display:none!important}
+.sm-panel{background:var(--panel);border:1px solid var(--line-dark);border-radius:var(--radius);padding:28px 22px;text-align:center}
+.sm-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.sm-big{font-size:1.05rem;padding:16px 30px}
+.sm-preview{margin:24px auto 0;max-width:340px}
+.sm-preview img{border-radius:12px;border:1px solid var(--line-dark);width:100%}
+.sm-retake{margin-top:10px;background:none;border:none;color:var(--gold);font-family:"Oswald",sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-size:.9rem}
+.sm-consent{display:flex;gap:12px;align-items:flex-start;text-align:left;max-width:560px;margin:22px auto 0;color:#ddd8cf;font-size:.95rem;cursor:pointer}
+.sm-consent input{width:20px;height:20px;margin-top:2px;accent-color:var(--gold);flex:none}
+#sm-submit{margin-top:24px}
+#sm-submit:disabled{opacity:.45;cursor:not-allowed}
+.sm-note{margin-top:16px;color:var(--muted-dark);font-size:.9rem}
+.sm-scan{position:relative;max-width:340px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--line-dark);line-height:0}
+.sm-scan img{width:100%}
+.sm-scanline{position:absolute;left:0;right:0;height:26%;top:-26%;background:linear-gradient(180deg,rgba(207,166,92,0) 0%,rgba(207,166,92,.35) 55%,rgba(207,166,92,.9) 100%);border-bottom:2px solid var(--gold);animation:sm-scan-move 2.2s ease-in-out infinite}
+@keyframes sm-scan-move{0%{top:-26%}50%{top:100%}100%{top:-26%}}
+@media (prefers-reduced-motion: reduce){.sm-scanline{animation:none;top:40%}}
+.sm-status{margin-top:22px;font-family:"Oswald",sans-serif;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.sm-faceshape{font-size:1.05rem;color:#ddd8cf;margin-bottom:20px}
+.sm-faceshape b{color:var(--gold)}
+.sm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:760px){.sm-grid{grid-template-columns:repeat(3,1fr)}}
+.sm-tile{position:relative;border:3px solid var(--line-dark);border-radius:12px;overflow:hidden;background:#000;text-align:left}
+.sm-tile img{width:100%;height:auto}
+.sm-tile .sm-rank{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.75);color:#fff;font-family:"Oswald",sans-serif;font-weight:600;border-radius:999px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:.95rem;z-index:2}
+.sm-tile .sm-cap{padding:10px 12px}
+.sm-tile .sm-cap b{display:block;font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:.98rem;color:#fff}
+.sm-tile .sm-cap span{color:var(--gold);font-family:"Oswald",sans-serif}
+.sm-tile.winner{border-color:#22b14c;box-shadow:0 0 0 3px #22b14c,0 0 26px rgba(34,177,76,.45)}
+.sm-tile .sm-top{position:absolute;top:8px;right:8px;background:#22b14c;color:#fff;font-family:"Oswald",sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.06em;padding:5px 10px;border-radius:999px;z-index:2}
+.sm-why{margin-top:26px;text-align:left;background:rgba(207,166,92,.08);border:1px solid rgba(207,166,92,.45);border-radius:12px;padding:22px}
+.sm-why h3{color:var(--gold);font-size:1.2rem;margin-bottom:8px}
+.sm-why-head{font-weight:600;color:#fff}
+.sm-why ul{list-style:none;margin-top:10px}
+.sm-why li{padding:5px 0 5px 26px;position:relative;color:#ddd8cf}
+.sm-why li::before{content:"✓";position:absolute;left:0;color:#22b14c;font-weight:700}
+.sm-show{margin-top:14px;font-weight:600;color:var(--gold)}
+.sm-usecases{margin-top:18px;text-align:left;color:#ddd8cf}
+.sm-usecases>div{padding:7px 0;border-bottom:1px solid #232323;display:flex;justify-content:space-between;gap:14px}
+.sm-usecases b{color:var(--gold);font-family:"Oswald",sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:.85rem;font-weight:600}
+#sm-again{margin-top:24px}
+.sm-message h3{color:var(--gold);margin-bottom:10px;font-size:1.3rem}
+.sm-message p{color:#ddd8cf;max-width:520px;margin:0 auto}
+.sm-message .btn{margin-top:20px}
+.sm-shop{display:block;text-align:center;margin-top:28px;color:var(--muted-dark);font-size:.92rem}
 </style>
 </head>
 <body id="top">
@@ -181,9 +230,66 @@ footer small{color:#7d786e;font-size:.82rem;display:block;margin-top:16px}
       <p class="script">Pro Barber &middot; Style Match</p>
       <h1>Style<br /><em>Match</em></h1>
       <p class="lede">Your next haircut — on YOUR face, before the clippers touch you. Style Match tries five haircuts on your own photo, reads your face shape, proportions and hairline, and your barber picks the one that suits you best — with the reasons why.</p>
-      <p><span class="badge">Free in store &mdash; just ask</span></p>
+      <div class="tryon" id="sm-app">
+        <!-- Step 1: photo + consent -->
+        <div class="sm-panel" id="sm-step1">
+          <div class="sm-actions">
+            <button type="button" class="btn btn-gold sm-big" id="sm-camera-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8.5 7l1.2-2.2h4.6L15.5 7"/></svg>
+              Take a photo
+            </button>
+            <button type="button" class="btn btn-ghost" id="sm-gallery-btn">Choose from gallery</button>
+          </div>
+          <input type="file" id="sm-camera-input" accept="image/*" capture="user" hidden />
+          <input type="file" id="sm-gallery-input" accept="image/*" hidden />
+          <div class="sm-preview" id="sm-preview" hidden>
+            <img id="sm-preview-img" alt="Your photo" />
+            <button type="button" class="sm-retake" id="sm-retake">Retake photo</button>
+          </div>
+          <label class="sm-consent" id="sm-consent-row" hidden>
+            <input type="checkbox" id="sm-consent" />
+            <span>I&rsquo;m happy for my photo to be processed by Google&rsquo;s Gemini AI to create my style previews. Pro Barber does not store my photo.</span>
+          </label>
+          <button type="button" class="btn btn-gold sm-big" id="sm-submit" disabled>Create my styles</button>
+          <p class="sm-note">Your photo is only used to create your previews — we don&rsquo;t keep it.</p>
+        </div>
+        <!-- Step 2: waiting -->
+        <div class="sm-panel" id="sm-step2" hidden>
+          <div class="sm-scan">
+            <img id="sm-scan-img" alt="Your photo" />
+            <div class="sm-scanline"></div>
+          </div>
+          <p class="sm-status" id="sm-status">Reading your face shape&hellip;</p>
+          <p class="sm-note">This takes about a minute or two — please keep this page open.</p>
+        </div>
+        <!-- Step 3: results -->
+        <div class="sm-panel" id="sm-step3" hidden>
+          <p class="sm-faceshape" id="sm-faceshape"></p>
+          <div class="sm-grid" id="sm-grid"></div>
+          <div class="sm-why">
+            <h3>Why this cut wins</h3>
+            <p class="sm-why-head" id="sm-why-head"></p>
+            <ul id="sm-why-list"></ul>
+            <p class="sm-show" id="sm-show"></p>
+          </div>
+          <div class="sm-usecases" id="sm-usecases"></div>
+          <button type="button" class="btn btn-ghost" id="sm-again">Try another photo</button>
+        </div>
+        <!-- Daily limit reached -->
+        <div class="sm-panel sm-message" id="sm-limit" hidden>
+          <h3>Today&rsquo;s Style Match is full</h3>
+          <p>We&rsquo;ve hit today&rsquo;s limit for Style Match previews. Please try again tomorrow — or ask in the shop and we&rsquo;ll run it for you at the counter.</p>
+          <button type="button" class="btn btn-ghost sm-back">Back</button>
+        </div>
+        <!-- Error -->
+        <div class="sm-panel sm-message" id="sm-error" hidden>
+          <h3>Something went wrong</h3>
+          <p id="sm-error-text">We couldn&rsquo;t create your previews just now. Please try again in a moment.</p>
+          <button type="button" class="btn btn-gold sm-back">Try again</button>
+        </div>
+      </div>
       <div class="hero-ctas">
-        <a class="btn btn-gold" href="#try">Try it free in the shop</a>
+        <a class="btn btn-gold" href="#sm-app">Try it free in the shop</a>
         <a class="btn btn-ghost" href="#how">How it works</a>
       </div>
     </div>
@@ -240,20 +346,6 @@ footer small{color:#7d786e;font-size:.82rem;display:block;margin-top:16px}
   </section>
 
   <!-- Try it -->
-  <section class="section black" id="try">
-    <div class="wrap reserve">
-      <div class="section-head" style="margin-bottom:0">
-        <span class="script">Try it</span>
-        <h2>Ask in the shop <em>to try Style Match</em></h2>
-      </div>
-      <p class="lede">It&rsquo;s free, and it takes about two minutes. Your photo is only used to create your style previews — we don&rsquo;t keep it.</p>
-      <div class="reserve-ctas">
-        <a class="btn btn-gold" href="tel:+61431166115">Call 0431 166 115</a>
-        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pro%20Barber%2C%20Shop%2019%2C%2025%20Separation%20St%2C%20Northcote%20Plaza%2C%20VIC">Get directions</a>
-      </div>
-      <small>Pro Barber — Shop 19, 25 Separation St, Northcote Plaza, Northcote VIC 3070. Walk-ins welcome.</small>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -295,5 +387,232 @@ footer small{color:#7d786e;font-size:.82rem;display:block;margin-top:16px}
   });
 })();
 </script>
+<script>
+(function () {
+  "use strict";
+
+  /* ======================================================================
+     Style Match backend endpoint.
+     Style Match backend endpoint (Google Cloud Run, deployed 21 Nov 2026).
+     ====================================================================== */
+  var WORKER_URL = "https://style-match-25kvoc5jka-ts.a.run.app/tryon";
+
+  var $ = function (id) { return document.getElementById(id); };
+  var panels = ["sm-step1", "sm-step2", "sm-step3", "sm-limit", "sm-error"];
+  var photoDataUrl = null;   // downscaled JPEG data URL (preview + scan)
+  var photoBase64 = null;    // raw base64 of the same JPEG (sent to worker)
+  var statusTimer = null;
+
+  function show(panelId) {
+    panels.forEach(function (id) { $(id).hidden = id !== panelId; });
+    if (panelId !== "sm-step2" && statusTimer) {
+      clearInterval(statusTimer);
+      statusTimer = null;
+    }
+  }
+
+  function showError(message) {
+    if (message) $("sm-error-text").textContent = message;
+    show("sm-error");
+  }
+
+  function updateSubmit() {
+    $("sm-submit").disabled = !(photoBase64 && $("sm-consent").checked);
+  }
+
+  /* ---- photo intake: downscale to max 1280px, JPEG, in the browser ---- */
+  function handleFile(file) {
+    if (!file) return;
+    if (!/^image\//.test(file.type || "")) {
+      showError("That file doesn't look like a photo. Please choose a clear selfie.");
+      return;
+    }
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () {
+      URL.revokeObjectURL(url);
+      var max = 1280;
+      var scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+      var canvas = document.createElement("canvas");
+      canvas.width = Math.round(img.naturalWidth * scale);
+      canvas.height = Math.round(img.naturalHeight * scale);
+      canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+      photoDataUrl = canvas.toDataURL("image/jpeg", 0.85);
+      photoBase64 = photoDataUrl.split(",")[1];
+      $("sm-preview-img").src = photoDataUrl;
+      $("sm-scan-img").src = photoDataUrl;
+      $("sm-preview").hidden = false;
+      $("sm-consent-row").hidden = false;
+      updateSubmit();
+    };
+    img.onerror = function () {
+      URL.revokeObjectURL(url);
+      showError("That photo could not be read. Please try another one.");
+    };
+    img.src = url;
+  }
+
+  $("sm-camera-btn").addEventListener("click", function () { $("sm-camera-input").click(); });
+  $("sm-gallery-btn").addEventListener("click", function () { $("sm-gallery-input").click(); });
+  $("sm-retake").addEventListener("click", function () { $("sm-camera-input").click(); });
+  $("sm-camera-input").addEventListener("change", function () { handleFile(this.files[0]); this.value = ""; });
+  $("sm-gallery-input").addEventListener("change", function () { handleFile(this.files[0]); this.value = ""; });
+  $("sm-consent").addEventListener("change", updateSubmit);
+
+  /* ---- waiting screen status rotation ---- */
+  var STATUS_LINES = [
+    "Reading your face shape…",
+    "Trying five cuts on your photo…",
+    "Checking every cut by hand…",
+    "Our barber AI is picking your best…"
+  ];
+  function startStatusRotation() {
+    var i = 0;
+    $("sm-status").textContent = STATUS_LINES[0];
+    statusTimer = setInterval(function () {
+      i = (i + 1) % STATUS_LINES.length;
+      $("sm-status").textContent = STATUS_LINES[i];
+    }, 4000);
+  }
+
+  /* ---- results ---- */
+  function sniffMime(b64) {
+    try {
+      var head = atob(b64.slice(0, 16));
+      if (head.charCodeAt(0) === 0xff && head.charCodeAt(1) === 0xd8) return "image/jpeg";
+      if (head.charCodeAt(0) === 0x89 && head.charAt(1) === "P") return "image/png";
+      if (head.slice(0, 4) === "RIFF") return "image/webp";
+    } catch (e) { /* fall through */ }
+    return "image/jpeg";
+  }
+
+  function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+
+  function renderResults(data) {
+    var byId = {};
+    data.styles.forEach(function (s) { byId[s.id] = s; });
+
+    $("sm-faceshape").innerHTML = "";
+    var fs = document.createElement("span");
+    fs.appendChild(document.createTextNode("Your face shape: "));
+    var b = document.createElement("b");
+    b.textContent = cap(data.faceShape);
+    fs.appendChild(b);
+    fs.appendChild(document.createTextNode(" — " + (data.faceShapeNote || "")));
+    $("sm-faceshape").appendChild(fs);
+
+    // Tiles in ranking order (winner first), rank numbers 1–5.
+    var order = (data.ranking || []).map(function (r) { return r.id; });
+    data.styles.forEach(function (s) { if (order.indexOf(s.id) === -1) order.push(s.id); });
+
+    var grid = $("sm-grid");
+    grid.innerHTML = "";
+    order.forEach(function (id, idx) {
+      var s = byId[id];
+      if (!s) return;
+      var tile = document.createElement("div");
+      tile.className = "sm-tile" + (id === data.bestStyleId ? " winner" : "");
+      var img = document.createElement("img");
+      img.src = "data:" + sniffMime(s.imageBase64) + ";base64," + s.imageBase64;
+      img.alt = s.name;
+      tile.appendChild(img);
+      var rank = document.createElement("span");
+      rank.className = "sm-rank";
+      rank.textContent = String(idx + 1);
+      tile.appendChild(rank);
+      if (id === data.bestStyleId) {
+        var top = document.createElement("span");
+        top.className = "sm-top";
+        top.textContent = "★ TOP PICK";
+        tile.appendChild(top);
+      }
+      var capEl = document.createElement("div");
+      capEl.className = "sm-cap";
+      var name = document.createElement("b");
+      name.textContent = s.name;
+      capEl.appendChild(name);
+      if (s.price !== null && s.price !== undefined) {
+        var price = document.createElement("span");
+        price.textContent = "$" + s.price;
+        capEl.appendChild(price);
+      }
+      tile.appendChild(capEl);
+      grid.appendChild(tile);
+    });
+
+    $("sm-why-head").textContent = data.whyHeadline || "";
+    var list = $("sm-why-list");
+    list.innerHTML = "";
+    (data.whyReasons || []).forEach(function (r) {
+      var li = document.createElement("li");
+      li.textContent = r;
+      list.appendChild(li);
+    });
+    var winner = byId[data.bestStyleId];
+    $("sm-show").textContent = winner
+      ? "Show this photo to your barber — ask for the " + winner.name + "."
+      : "";
+
+    var uc = data.useCases || {};
+    var ucLabels = [
+      ["Daily Wear", uc.dailyWear],
+      ["Professional / Work", uc.professionalWork],
+      ["Low Maintenance", uc.lowMaintenance],
+      ["Stylish / Modern", uc.stylishModern]
+    ];
+    var ucBox = $("sm-usecases");
+    ucBox.innerHTML = "";
+    ucLabels.forEach(function (pair) {
+      if (!pair[1] || !byId[pair[1]]) return;
+      var row = document.createElement("div");
+      var label = document.createElement("b");
+      label.textContent = pair[0];
+      var val = document.createElement("span");
+      val.textContent = byId[pair[1]].name;
+      row.appendChild(label);
+      row.appendChild(val);
+      ucBox.appendChild(row);
+    });
+
+    show("sm-step3");
+  }
+
+  /* ---- submit ---- */
+  $("sm-submit").addEventListener("click", function () {
+    if (!photoBase64 || !$("sm-consent").checked) return;
+    show("sm-step2");
+    startStatusRotation();
+    fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ photoBase64: photoBase64, mimeType: "image/jpeg" })
+    })
+      .then(function (res) { return res.json().catch(function () { return null; }); })
+      .then(function (data) {
+        if (!data) { showError(); return; }
+        if (data.status === "ready") { renderResults(data); return; }
+        if (data.status === "limit-reached") { show("sm-limit"); return; }
+        showError(data.message || undefined);
+      })
+      .catch(function () { showError(); });
+  });
+
+  /* ---- reset / back ---- */
+  function resetAll() {
+    photoDataUrl = null;
+    photoBase64 = null;
+    $("sm-preview").hidden = true;
+    $("sm-consent-row").hidden = true;
+    $("sm-consent").checked = false;
+    updateSubmit();
+    show("sm-step1");
+  }
+  $("sm-again").addEventListener("click", resetAll);
+  Array.prototype.forEach.call(document.querySelectorAll(".sm-back"), function (btn) {
+    btn.addEventListener("click", resetAll);
+  });
+})();
+</script>
+
 </body>
 </html>
