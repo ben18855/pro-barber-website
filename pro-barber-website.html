@@ -39,6 +39,11 @@
         "postalCode": "3070",
         "addressCountry": "AU"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -37.768301,
+        "longitude": 145.001815
+      },
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -54,7 +59,8 @@
         }
       ],
       "sameAs": [
-        "https://www.instagram.com/probarber.au"
+        "https://www.instagram.com/probarber.au",
+        "https://www.facebook.com/probarber.au"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -70,10 +76,83 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Side Only" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "25", "maxPrice": "30", "priceCurrency": "AUD" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seniors Cut" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "25", "maxPrice": "30", "priceCurrency": "AUD" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beard Trim" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": "20", "maxPrice": "25", "priceCurrency": "AUD" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Face Shave (clipper only)" }, "price": "15", "priceCurrency": "AUD" }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Face Shave (clipper only)" }, "price": "15", "priceCurrency": "AUD" },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Style Match — AI Hairstyle Preview", "url": "https://probarber.com.au/style-match.html", "description": "Free AI hairstyle preview: see five haircuts on your own photo and get your barber's #1 pick, with the reasons why. Your photo is not kept or stored." }, "price": "0", "priceCurrency": "AUD" }
         ]
       }
     }
+    </script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How much is a skin fade in Northcote?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A skin fade at Pro Barber in Northcote is $45. A zero fade is $41, a standard haircut is $37, and a buzz cut is $20."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need to book, or can I walk in?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can just walk in — no booking needed. Pro Barber is walk-ins only, so come in whenever suits you during opening hours."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where is Pro Barber located?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pro Barber is at Shop 19, 25 Separation St, inside Northcote Plaza in Northcote, VIC 3070. You'll find us inside the plaza — look for Shop 19."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is Style Match? Can I see a hairstyle on my own face before the cut?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Style Match is Pro Barber's free AI hairstyle preview. You upload a photo of yourself and it tries five haircuts on your own face, reads your face shape, and gives you your barber's #1 pick — with the reasons why it suits you. Try it at probarber.com.au/style-match.html before you come in, or ask in the shop."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does Style Match cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nothing — Style Match is completely free. It takes about two minutes, and your photo is not kept or stored."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are your opening hours?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pro Barber is open Monday, Wednesday, Thursday, Friday and Saturday from 10:00 am to 5:30 pm, and Sunday from 11:00 am to 4:00 pm. We are closed on Tuesdays."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Where do I park, and how do I get to Northcote Plaza?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — Northcote Plaza has plenty of customer parking, and the car park on one side of the centre is free all day. Pro Barber is Shop 19, inside the plaza, just off High St on Separation St."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much is a beard trim?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A beard trim at Pro Barber is $20–$25, depending on the work involved. A clipper-only face shave is $15."
+            }
+        }
+    ]
+}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -371,6 +450,13 @@
         .about-single{display:block;text-align:center;}
         .about-photo{width:150px;margin:0 auto 18px;}
       }
+      /* ---------- FAQ ---------- */
+      .faq-list{max-width:820px;margin:0 auto;text-align:left;}
+      .faq-item{border-bottom:1px solid var(--line-light);padding:22px 0;}
+      .faq-item:first-child{padding-top:0;}
+      .faq-item:last-child{border-bottom:0;padding-bottom:0;}
+      .faq-item h3{font-size:1.12rem;font-weight:600;margin-bottom:8px;}
+      .faq-item p{margin:0;color:var(--muted-light);}
     </style>
   </head>
   <body>
@@ -583,6 +669,50 @@
             <tr data-day="0"><td>Sunday</td><td>11:00 am &ndash; 4:00 pm</td></tr>
           </table>
           <p style="color:var(--muted-dark);font-size:.92rem;margin-top:16px;">Hours can change on public holidays — give us a quick call to check.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ (light) ===== -->
+    <section class="section light" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="script">good to know</span>
+          <h2>Frequently asked <em>questions</em></h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>How much is a skin fade in Northcote?</h3>
+            <p>A skin fade at Pro Barber in Northcote is $45. A zero fade is $41, a standard haircut is $37, and a buzz cut is $20.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Do I need to book, or can I walk in?</h3>
+            <p>You can just walk in — no booking needed. Pro Barber is walk-ins only, so come in whenever suits you during opening hours.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Where is Pro Barber located?</h3>
+            <p>Pro Barber is at Shop 19, 25 Separation St, inside Northcote Plaza in Northcote, VIC 3070. You'll find us inside the plaza — look for Shop 19.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What is Style Match? Can I see a hairstyle on my own face before the cut?</h3>
+            <p>Yes. Style Match is Pro Barber's free AI hairstyle preview. You upload a photo of yourself and it tries five haircuts on your own face, reads your face shape, and gives you your barber's #1 pick — with the reasons why it suits you. Try it at probarber.com.au/style-match.html before you come in, or ask in the shop.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How much does Style Match cost?</h3>
+            <p>Nothing — Style Match is completely free. It takes about two minutes, and your photo is not kept or stored.</p>
+          </div>
+          <div class="faq-item">
+            <h3>What are your opening hours?</h3>
+            <p>Pro Barber is open Monday, Wednesday, Thursday, Friday and Saturday from 10:00 am to 5:30 pm, and Sunday from 11:00 am to 4:00 pm. We are closed on Tuesdays.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Where do I park, and how do I get to Northcote Plaza?</h3>
+            <p>Yes — Northcote Plaza has plenty of customer parking, and the car park on one side of the centre is free all day. Pro Barber is Shop 19, inside the plaza, just off High St on Separation St.</p>
+          </div>
+          <div class="faq-item">
+            <h3>How much is a beard trim?</h3>
+            <p>A beard trim at Pro Barber is $20–$25, depending on the work involved. A clipper-only face shave is $15.</p>
+          </div>
         </div>
       </div>
     </section>
