@@ -5,6 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Style Match — See Your Next Cut On Your Own Face | Pro Barber Northcote</title>
 <meta name="description" content="Style Match at Pro Barber Northcote: try it free right here — see five haircuts on your own photo and get your barber's #1 pick, with the reasons why." />
+<!-- Canonical -->
+<link rel="canonical" href="https://probarber.com.au/style-match.html" />
+
+<!-- Open Graph (mirrors the homepage's tag set) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Pro Barber" />
+<meta property="og:title" content="Style Match — See Your Next Cut On Your Own Face | Pro Barber Northcote" />
+<meta property="og:description" content="Style Match at Pro Barber Northcote: try it free right here — see five haircuts on your own photo and get your barber's #1 pick, with the reasons why." />
+<meta property="og:url" content="https://probarber.com.au/style-match.html" />
+<meta property="og:image" content="https://probarber.com.au/assets/logo-on-dark.jpg" />
+
+<!-- Twitter (mirrors the homepage's tag set) -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Style Match — See Your Next Cut On Your Own Face | Pro Barber Northcote" />
+<meta name="twitter:description" content="Style Match at Pro Barber Northcote: try it free right here — see five haircuts on your own photo and get your barber's #1 pick, with the reasons why." />
+
+<!-- Structured data: Style Match as a free service offered by Pro Barber.
+     The BarberShop node reuses the homepage's @id so crawlers merge it with
+     the existing homepage schema instead of seeing a second business. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BarberShop",
+      "@id": "https://probarber.com.au/#barbershop",
+      "name": "Pro Barber",
+      "url": "https://probarber.com.au/",
+      "telephone": "+61 431 166 115",
+      "email": "ben@probarber.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop 19, 25 Separation St, Northcote Plaza",
+        "addressLocality": "Northcote",
+        "addressRegion": "VIC",
+        "postalCode": "3070",
+        "addressCountry": "AU"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "17:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "11:00",
+          "closes": "16:00"
+        }
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": { "@id": "https://probarber.com.au/style-match.html#style-match" },
+        "price": "0",
+        "priceCurrency": "AUD"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://probarber.com.au/style-match.html#style-match",
+      "name": "Style Match — AI Hairstyle Preview",
+      "serviceType": "AI hairstyle preview",
+      "url": "https://probarber.com.au/style-match.html",
+      "description": "Style Match is a free AI hairstyle preview at Pro Barber Northcote. Upload your photo and Style Match tries five haircuts on your own face, reads your face shape, and gives you your barber's #1 pick with the reasons why. It takes about two minutes, and your photo is not kept or stored.",
+      "provider": { "@id": "https://probarber.com.au/#barbershop" },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Northcote, VIC"
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Style Match — AI Hairstyle Preview",
+        "price": "0",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://probarber.com.au/style-match.html"
+      }
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
 :root{
